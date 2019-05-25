@@ -1,0 +1,237 @@
+<<<<<<< HEAD
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  position: fixed;
+  z-index: 9999;
+  background-color: black;
+  left: 0;
+  right: 0;
+  top: 0;
+  }
+.logo a {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 2em;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.main_nav ul li a {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  margin: 45px 35px;
+}
+ul {
+  list-style-type: none;
+display: flex;
+justify-content: space-around;
+}
+li {
+  margin-top: 10px;
+}
+.search-box {
+  width: 100%;
+  position: relative;
+  padding-left: 40px;
+  left: 65px;
+}
+.search_input {
+  float: left;
+  background: white;
+  width: 60%;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  padding: 6px;
+  margin-top: 6px;
+  border-radius: 20px;
+}
+#search_button {
+  position: absolute;
+  top: 18%;
+  right: 200px;
+  width: 31px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor:pointer;
+  font-size: 20px;
+}
+#search_button:hover {
+  color: lightblue;
+}
+.fa-search {
+  margin-right:20px;
+  width: 50%;
+}
+.login-registro{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.login-registro a {
+  margin: 10px;
+  color: white;
+}
+.shopping{
+  padding: 0px 20px;
+  position: relative;
+  margin-right: 10px;
+}
+.shopping ul li{
+  margin-left: 10px;
+  width: 30px;
+}
+.shopping a{
+  color: white;
+}
+.shopping a:hover{
+  color: lightblue;
+}
+
+h3 {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'Playfair Display' serif;
+}
+.row {
+  margin:0;
+}
+.card {
+margin-bottom: 20px;
+}
+.card-header {
+ margin-bottom: 2px;
+}
+ .btn-link{
+  font-family: 'Playfair Display' serif;
+color: black;
+font-weight: 500;
+}
+.btn-link:hover {
+  color: black;
+}
+.card-body a {
+  color: black;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.pie {
+  background-color: rgba(0,0,0,0.9);
+  text-decoration: none;
+  bottom: 0;
+  text-align: center;
+  }
+.columna-pie {
+  margin-left: 135px;
+  margin-right: 135px;
+}
+.logo-pie {
+    margin-bottom: 30px;
+}
+.logo-pie a {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: white;
+}
+.nav-pie ul li a {
+  list-style-type: none;
+  color: white;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+.redes-pie {
+  margin-top: 51px;
+}
+.redes-pie ul li a {
+  list-style-type: none;
+  color: white;
+  margin-right: 50px;
+}
+ul:last-child {
+ justify-content: center;
+}
+.copyright {
+  margin-top: 56px;
+padding-bottom: 13px;
+font-family: 'Playfair Display', serif;
+font-size: 12px;
+color: white;
+}
+.hamb, #toggle, .nuevo_menu {
+  display: none;
+}
+@media(max-width: 960px) {
+  .main_nav, .search-box, .search_input, #search_button, .fa-search, .login-registro, .shopping {
+    display: none;
+  }
+  .header {
+    display: inline-block;
+
+     text-align: right;
+     height: 70px;
+     line-height: 70px;
+  }
+  .logo {
+    text-align: left;
+  }
+  .nuevo_menu {
+    display: inline-block ;
+    margin: -6px 30px 0 0;
+    text-align: center;
+    width: 100%;
+    display: none;
+    background-color: black;
+  }
+  .nuevo_menu a {
+    clear: right;
+    text-decoration: none;
+    color: white;
+    line-height: 70px;
+    display: block;
+    border-bottom: 1px solid white;
+    margin: 0;
+
+  }
+  .nuevo_menu a: {
+    text-decoration: underline;
+  }
+  .hamb {
+    display: block;
+    cursor: pointer;
+    margin: -76px 3% 0 0;
+    font-size: 26px;
+    color: white;
+    line-height: 70px;
+    width: 26px;
+    float: right;
+
+  }
+  #toggle {
+    display: inline-block;
+    display: none;
+  }
+  #toggle:checked + .nuevo_menu {
+    display: block;
+  }
+@media(max-width: 460px) {
+  .pie {
+    width: 105%;
+  }
+  .nav-pie ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+
+}
+=======
+>>>>>>> d87cbd194a6f42093746380e98d2563da68e980c

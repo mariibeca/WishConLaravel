@@ -1,0 +1,313 @@
+<<<<<<< HEAD
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(/img/logo_final.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 160px;
+}
+.header {
+  display: flex;
+  position: fixed;
+  z-index: 9999;
+  background-color: black;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 12px;
+  }
+.logo a {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 2em;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.main_nav ul li a {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  margin: 45px 35px;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: auto;
+}
+li {
+  margin-top: 9px;
+  margin-left: -20px;
+}
+.search-box {
+  width: 100%;
+  position: relative;
+  padding-left: 4%;
+  left: 4%;
+}
+.search_input {
+  float: left;
+  background: white;
+  width: 61%;
+  font-size: 10px;
+  border: none;
+  outline: none;
+  padding: 6px;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+#search_button {
+  position: absolute;
+  top: 18%;
+  right: 33%;
+  width: 9%;
+  height: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor:pointer;
+  font-size: 15px;
+}
+#search_button:hover{
+  color: lightblue;
+}
+.fa-search {
+  width: 50%;
+}
+.login-registro{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.login-registro a {
+  margin: 28px;
+  color: white;
+}
+.shopping{
+  position: relative;
+  margin-right: 20px;
+}
+.shopping ul li{
+  margin-left: 10px;
+  width: 20px;
+}
+.shopping a{
+  color: white;
+}
+.shopping a:hover{
+  color: lightblue;
+}
+.caja-registro {
+  width: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.caja-registro h1{
+  font-size: 48px;
+  border-bottom: 2px solid lightblue;
+  margin-bottom: 21px;
+  padding: 13px 0;
+}
+.texto-registro {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: -4px 0;
+  border-bottom: 1px solid;
+  color: white;
+
+}
+.texto-registro input {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  float: left;
+  margin: 0 10px;
+}
+::-webkit-input-placeholder {
+  color: white;
+}
+.btn {
+  width: 100%;
+  background: none;
+  border: 2px solid lightblue;
+  color: white;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
+}
+
+.texto-checkbox {
+  border: 0;
+  text-align: left;
+
+}
+.texto-checkbox input {
+  margin-right: 5px;
+}
+
+.texto-checkbox label {
+  font-size: 11px;
+}
+#pais {
+  background-color: black;
+  color: white;
+}
+.buton_registro button {
+  width: 100%;
+  background: none;
+  border: 2px solid lightblue;
+  color: white;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
+}
+.pie {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  text-decoration: none;
+  top: 93%;
+  text-align: center;
+  }
+.columna-pie {
+  margin-left: 135px;
+  margin-right: 135px;
+}
+.logo-pie {
+    margin-bottom: 30px;
+}
+.logo-pie a {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: white;
+}
+.nav-pie ul li a {
+  list-style-type: none;
+  color: white;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+.redes-pie {
+  margin-top: 51px;
+}
+.redes-pie ul li a {
+  list-style-type: none;
+  color: white;
+  margin-right: 50px;
+}
+ul:last-child {
+ justify-content: center;
+}
+.copyright {
+  margin-top: 56px;
+padding-bottom: 13px;
+font-family: 'Playfair Display', serif;
+font-size: 12px;
+color: white;
+}
+.hamb, #toggle, .nuevo_menu {
+  display: none;
+}
+@media(max-width: 960px) {
+  .main_nav, .search-box, .search_input, #search_button, .fa-search, .login-registro, .shopping {
+    display: none;
+  }
+  .header {
+    display: inline-block;
+
+     text-align: right;
+     height: 70px;
+     line-height: 70px;
+  }
+  .logo {
+    text-align: left;
+  }
+  .nuevo_menu {
+    display: inline-block ;
+    margin: -6px 30px 0 0;
+    text-align: center;
+    width: 100%;
+    display: none;
+    background-color: black;
+  }
+  .nuevo_menu a {
+    clear: right;
+    text-decoration: none;
+    color: white;
+    line-height: 70px;
+    display: block;
+    border-bottom: 1px solid white;
+    margin: 0;
+
+  }
+  .nuevo_menu a: {
+    text-decoration: underline;
+  }
+  .hamb {
+    display: block;
+    cursor: pointer;
+    margin: -76px 3% 0 0;
+    font-size: 26px;
+    color: white;
+    line-height: 70px;
+    width: 26px;
+    float: right;
+
+  }
+  #toggle {
+    display: inline-block;
+    display: none;
+  }
+  #toggle:checked + .nuevo_menu {
+    display: block;
+  }
+  .pie {
+    width: 105%;
+    }
+  .nav-pie ul {
+    display: block;
+  }
+  .nav-pie ul li a {
+    font-size: 2vw;
+  }
+  .redes-pie {
+    margin-right: 5vw;
+  }
+  @media(max-width: 460px) {
+    .pie {
+      width: 115%;
+    }
+    .nav-pie ul {
+      text-align: center;
+    }
+    .nav-pie ul li a {
+      list-style-type: none;
+      color: white;
+      margin-right: 10px;
+    }
+    .redes-pie {
+      margin-top: 20px;
+    }
+    .redes-pie ul li a {
+      list-style-type: none;
+      color: white;
+      margin-right: 50px;
+    }
+    .copyright {
+     margin-top: 20px;
+    }

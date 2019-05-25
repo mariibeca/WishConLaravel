@@ -1,0 +1,589 @@
+<<<<<<< HEAD
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  position: fixed;
+  z-index: 9999;
+  background-color: black;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 12px;
+  }
+.logo a {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 2em;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.main_nav ul li a {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  margin: 45px 35px;
+}
+ul {
+  list-style-type: none;
+display: flex;
+justify-content: space-around;
+margin-bottom: auto;
+}
+li {
+  margin-top: 9px;
+  margin-left: -20px;
+}
+.search-box {
+  width: 100%;
+  position: relative;
+  padding-left: 4%;
+  left: 4%;
+}
+.search_input {
+  float: left;
+  background: white;
+  width: 61%;
+  font-size: 10px;
+  border: none;
+  outline: none;
+  padding: 6px;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+#search_button {
+  position: absolute;
+  top: 18%;
+  right: 33%;
+  width: 9%;
+  height: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor:pointer;
+  font-size: 15px;
+}
+#search_button:hover {
+  color: lightblue;
+}
+.fa-search {
+  width: 50%;
+}
+.login-registro{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.login-registro a {
+  margin: 28px;
+  color: white;
+}
+.shopping{
+  position: relative;
+  margin-right: 20px;
+}
+.shopping ul li{
+  margin-left: 10px;
+  width: 20px;
+}
+.shopping a{
+  color: white;
+}
+.shopping a:hover{
+  color: lightblue;
+}
+#carouselExampleControls {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+}
+.home_slider_subtitle{
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  padding: 10px 14px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8vw;
+      background: #2f2f2f;
+      color: white;
+      transform: translateX(-50%);
+}
+.home_slider_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+    font-family: 'Playfair Display', serif;
+    font-size: 59px;
+    background: #937c6f;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    transform: translateX(-50%);
+}
+.container {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+.promo {
+  padding-top: 88px;
+  margin: 15px;
+}
+.promo_content {
+  text-align: center;
+  padding-bottom: 88px;
+}
+.promo_content_subtitle {
+  color: #937c6f;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+}
+.promo_content_title {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+}
+#promo {
+  width: 100%;
+}
+.promo_image_content {
+  position: absolute;
+  top: 43.6%;
+}
+.promo_image_content_1{
+  right: 0;
+  text-align: right;
+  padding-right: 28px;
+}
+.promo_image_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  color: #FFFFFF;
+  padding-right:
+}
+.promo_image_subtitle {
+  font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+.promo_image_content_2 {
+  width: 92%;
+  text-align: center;
+  background: rgba(35, 35, 35, 0.63);
+  padding-bottom: 9px;
+  padding-top: 2px;
+}
+.promo_image_content_3 {
+  top: 30%;
+  left: 30px;
+  background: #232323;
+  padding-left: 10px;
+  text-align: center;
+  padding-right: 22px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.promo_link {
+width: 100%;
+height: 60px;
+background-color: #2f2f2f;
+text-align: center;
+}
+.promo_link a {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 14px;
+  line-height: 60px;
+}
+.arrivals {
+  padding-top: 88px;
+  margin: 15px;
+
+}
+.arrival_content {
+  text-align: center;
+  padding-bottom: 88px;
+}
+.arrivals_subtitle {
+  color: #937c6f;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+}
+.arrivals_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+}
+
+.product {
+  display: block;
+  position: relative;
+}
+.rating {
+  margin-top: 24px;
+}
+.rating i {
+  font-size: 10px;
+  margin-right: 1px;
+}
+.rating_4 i {
+  color: #f5c06f;
+}
+.rating_4 i:last-child {
+  color: grey;
+}
+.product_info {
+ margin-top: 7px;
+}
+.product_name a {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  color: #232323;
+}
+.product_price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #8a8a8a;
+}
+.newsletter {
+  position: relative;
+  padding-top: 93px;
+  padding-bottom: 93px;
+}
+.newsletter_image img {
+  width: 100%;
+}
+.newsletter-content {
+  position: absolute;
+  top: 33%;
+  left: 4vw;
+  text-align: center;
+}
+.newsletter_subtitle {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 1vw;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+.newsletter_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4vw;
+  color: white;
+}
+.newsletter_form_container {
+  position: relative;
+  padding-left: 35px;
+  padding-right: 90px;
+}
+.newsletter_input {
+  width: 100%;
+height: 46px;
+background: #FFFFFF;
+padding-left: 35px;
+padding-right: 35px;
+border: 1px solid grey;
+outline: none;
+}
+.newsletter_button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 142px;
+  height: 46px;
+  background: #937c6f;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  border: none;
+  outline: none;
+  margin-right: 35px;
+}
+.newsletter_text {
+font-family:  'Open Sans', sans-serif;
+font-size: 1.3vw;
+margin-top: 19px;
+font-style: italic;
+color: white;
+
+}
+.pie {
+  background-color: rgba(0,0,0,0.9);
+  text-decoration: none;
+  bottom: 0;
+  text-align: center;
+  }
+.columna-pie {
+  margin-left: 135px;
+  margin-right: 135px;
+}
+.logo-pie {
+    margin-bottom: 30px;
+}
+.logo-pie a {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  color: white;
+}
+.nav-pie ul li a {
+  list-style-type: none;
+  color: white;
+  margin-top: 30px;
+  margin-right: 40px;
+  font-size: 2vw;
+}
+.redes-pie {
+  margin-top: 51px;
+}
+.redes-pie ul li a {
+  list-style-type: none;
+  color: white;
+  margin-right: 50px;
+}
+ul:last-child {
+ justify-content: center;
+}
+.copyright {
+  margin-top: 56px;
+padding-bottom: 13px;
+font-family: 'Playfair Display', serif;
+font-size: 12px;
+color: white;
+}
+.hamb, #toggle, .nuevo_menu {
+  display: none;
+}
+@media(max-width: 960px) {
+  .main_nav, .search-box, .search_input, #search_button, .fa-search, .login-registro, .shopping {
+    display: none;
+  }
+  .header {
+    display: inline-block;
+
+     text-align: right;
+     height: 70px;
+     line-height: 70px;
+  }
+  .logo {
+    text-align: left;
+  }
+  .nuevo_menu {
+    display: inline-block ;
+    margin: -6px 30px 0 0;
+    text-align: center;
+    width: 100%;
+    display: none;
+    background-color: black;
+  }
+  .nuevo_menu a {
+    clear: right;
+    text-decoration: none;
+    color: white;
+    line-height: 70px;
+    display: block;
+    border-bottom: 1px solid white;
+    margin: 0;
+
+  }
+  .nuevo_menu a: {
+    text-decoration: underline;
+  }
+  .hamb {
+    display: block;
+    cursor: pointer;
+    margin: -76px 4% 0 0;
+    font-size: 26px;
+    color: white;
+    line-height: 70px;
+    width: 26px;
+    float: right;
+
+  }
+  #toggle {
+    display: inline-block;
+    display: none;
+  }
+  #toggle:checked + .nuevo_menu {
+    display: block;
+  }
+  #carouselExampleControls {
+    margin-top: 5vw;
+    position: relative;
+    width: 104vw;
+  }
+  .home_slider_title {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5vw;
+  }
+  .home_slider_subtitle {
+    top: 41%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .newsletter {
+    position: relative;
+    padding-top: 93px;
+    padding-bottom: 93px;
+  }
+  .newsletter_image img {
+    width: 105%;
+  }
+  .newsletter-content {
+    position: absolute;
+    top: 28%;
+    left: 6%;
+    text-align: center;
+  }
+  .newsletter_subtitle {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 2vw;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    margin-top: 1vw;
+  }
+  .newsletter_title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3vw;
+    color: white;
+  }
+  .newsletter_form_container {
+    position: relative;
+    padding-left: 35px;
+    padding-right: 90px;
+  }
+  .newsletter_input {
+    width: 98%;
+  height: 46px;
+  background: #FFFFFF;
+  padding-left: 35px;
+  padding-right: 35px;
+  border: 1px solid grey;
+  outline: none;
+  }
+  .newsletter_button {
+    position: absolute;
+    top: 0;
+    width: 13%;
+    height: 100%;
+    background: #937c6f;
+    color: white;
+    font-size: 1.3vw;
+    letter-spacing: 0.2em;
+    border: none;
+    outline: none;
+    right: 7%;
+  }
+  .newsletter_text {
+  font-family:  'Open Sans', sans-serif;
+  font-size: 1.7vw;
+  margin-top: 4px;
+  font-style: italic;
+  color: white;
+  margin-right: 89px;
+  margin-left: 44px;
+
+}
+.pie {
+  width: 105%;
+  }
+.nav-pie ul {
+  display: block;
+}
+.nav-pie ul li a {
+  font-size: 2vw;
+}
+.redes-pie {
+  margin-right: 5vw;
+}
+@media(max-width: 460px) {
+  #carouselExampleControls {
+      margin-top: 15%;
+      width: 110vw;
+  }
+  .home_slider_subtitle {
+    display: none;
+  }
+  .home_slider_title {
+    display: none;
+  }
+  .promo_item {
+    margin-left: 25px;
+    margin-top: 30px;
+  }
+  .promo_image_content_2 {
+    width: 87%;
+  }
+  .promo_image_content_3 {
+    left: 11%;
+  }
+  .rating {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .product_info {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .newsletter_image {
+    margin-right: -10%;
+  }
+
+  /* prueba leti mobile */
+.newsletter_subtitle {
+  margin-top: 1vw;
+}
+  .newsletter_title {
+    font-size: 4vw;
+  }
+  .newsletter_text {
+    font-size: 1.7vw;
+    margin-left: 20vw;
+    margin-top: -2vw;
+  }
+  .newsletter_form_container {
+    padding: 10px;
+  }
+.pie {
+  width: 115%;
+}
+.nav-pie ul {
+  text-align: center;
+}
+.nav-pie ul li a {
+  list-style-type: none;
+  color: white;
+  margin-right: 10px;
+}
+.redes-pie {
+  margin-top: 20px;
+}
+.redes-pie ul li a {
+  list-style-type: none;
+  color: white;
+  margin-right: 50px;
+}
+.copyright {
+ margin-top: 20px;
+}
+.newsletter_input {
+  width: 62%;
+  padding-right: 20px;
+  height: 7vw;
+  background: #FFFFFF;
+  border: 1px solid grey;
+  outline: none;
+}
+.newsletter_button {
+  top: 10px;
+  width: 13%;
+  height: 7.1vw;
+  font-size: 1.4vw;
+}
