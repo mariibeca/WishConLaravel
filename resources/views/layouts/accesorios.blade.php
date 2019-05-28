@@ -5,50 +5,7 @@
 @section('contenido')
 
   <div class="container">
-  <header class="header">
-    <div class="logo"><a href="home.php">Wish</a></div>
-  			<nav class="main_nav">
-  				<ul>
-  					<li><a href="ropa.php">ROPA</a></li>
-  					<li><a href="accesorios.php">ACCESORIOS</a></li>
-  					<li><a href="contact.php">CONTACTO</a></li>
-  				</ul>
-  			</nav>
-        <div class="search-box">
-          <input type="search" name="" value="" class="search_input">
-          <button type="submit" name="button" id="search_button">
-              <i class="fas fa-search"></i>
-          </button>
-        </div>
-        <div class="login-registro">
-          <ul>
-            <li><i class="fas fa-unlock"></i></li>
-            <li><a href="login.php">Login</a></li>
-            <li><i class="fas fa-user"></i></li>
-            <li><a href="registro.php">Registrarse</a></li>
-          </ul>
-
-        </div>
-        <div class="shopping">
-          <ul>
-            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-            <li><a href="#"><i class="far fa-heart"></i></a></li>
-
-
-
-      </ul>
-    </div>
-     <label class="hamb" for="toggle">&#9776;</label>
-     <input type="checkbox" id="toggle">
-    <div class="nuevo_menu">
-      <a href="ropa.php">ROPA</a>
-      <a href="accesorios.php">ACCESORIOS</a>
-      <a href="contact.php">CONTACTO</a>
-      <a href="login.php">LOGIN</a>
-      <a href="registro.php">REGISTRARSE</a>
-
-    </div>
-  </header>
+  
 <!-- BODY -->
   <div class="accesorios">
   <div class="accesorios_content">
