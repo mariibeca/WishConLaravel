@@ -16,10 +16,10 @@
 
 <div class="form-group">
  <label for="category">Categoria:</label>
- <select name="category">
-   <option value="value1">Value 1</option>
-   <option value="value2">Value 2</option>
-   <option value="value3">Value 3</option>
+ <select name="category_id">
+ @foreach($categorias as $categoria)
+   <option value="{{$categoria->id}}">{{$categoria->name}}</option>
+   @endforeach
 </select>
 </div>
 
