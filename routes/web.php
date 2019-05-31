@@ -2,6 +2,14 @@
 
 /* Rutas nuevas */
 
+        Route::get('/products', 'ProductController@create');
+        
+        Route::post('/products', 'ProductController@save');
+
+        Route::get('/products', function(){
+          return view('layouts.products');
+          });
+
         Route::get('/index', function(){
           return view('layouts.index');
         });

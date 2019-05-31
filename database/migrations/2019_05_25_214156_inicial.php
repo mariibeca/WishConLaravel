@@ -13,7 +13,7 @@ class Inicial extends Migration
      */
     public function up()
     {
-            Schema::create('users', function (Blueprint $table) {
+            /*Schema::create('users', function (Blueprint $table) {
               $table->bigIncrements('id')->unsigned();
               $table->string('name', 255);
               $table->string('last name', 255);
@@ -21,7 +21,7 @@ class Inicial extends Migration
               $table->string('password');
               $table->boolean('admin')->default(0);
               $table->timestamps();
-          });
+          });*/
 
             Schema::create('products', function (Blueprint $table) {
               $table->bigIncrements('id')->unsigned();
