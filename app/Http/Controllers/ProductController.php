@@ -8,6 +8,12 @@ use App\Category;
 
 class ProductController extends Controller
 {
+    public function index(){
+        $index= Product::all();
+        return view('layouts.products')->with(['productos'=>$index]);
+
+    }   
+
     public function create()
     {
         $categorias= Category::all();
@@ -15,6 +21,11 @@ class ProductController extends Controller
     
     }
 
+    public function edit($id){
+        $productoEditado = Product::find($id);
+        $categorias= Category::all();
+        return view ('layouts.productsEdit');
+    }
 
     public function save(Request $request)
         {

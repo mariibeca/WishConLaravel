@@ -2,10 +2,13 @@
 
 /* Rutas nuevas */
 
-        Route::get('/products', 'ProductController@create');
+        Route::get('/products/create', 'ProductController@create');
         
         Route::post('/products', 'ProductController@save');
 
+        Route::get('/products', 'ProductController@index');
+
+        Route::get('/products/edit/{id}', 'ProductController@edit');
       
         Route::get('/index', function(){
           return view('layouts.index');
