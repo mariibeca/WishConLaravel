@@ -3,13 +3,20 @@
 /* Rutas nuevas */
 
         Route::get('/products/create', 'ProductController@create');
-        
-        Route::post('/products', 'ProductController@save');
 
-        Route::get('/products', 'ProductController@index');
+        Route::get('/products/save', function(){
+          return view('layouts.productsSave');
+        });
+
+        Route::post('/products/create', 'ProductController@save');
+
+        Route::get('/products', 'ProductController@index'); //funciona
+
+        Route::post('/products/edit/{id}', 'ProductController@update');
 
         Route::get('/products/edit/{id}', 'ProductController@edit');
-      
+
+
         Route::get('/index', function(){
           return view('layouts.index');
         });
@@ -41,3 +48,7 @@
         Route::get('/', function () {
             return view('welcome');
         });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

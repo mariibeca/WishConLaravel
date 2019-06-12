@@ -1,4 +1,4 @@
-<form class="" action="" method="post">
+<form class="" action="" method="post" enctype="multipart/form-data">
  @csrf
 <div class="form-group">
  <label for="name">Nombre:</label>
@@ -17,6 +17,7 @@
 <div class="form-group">
  <label for="category">Categoria:</label>
  <select name="category_id">
+   <option value="">Seleccione</option>
  @foreach($categorias as $categoria)
    <option value="{{$categoria->id}}">{{$categoria->name}}</option>
    @endforeach
@@ -24,7 +25,7 @@
 </div>
 
 <div class="form-group">
- <label for="desc">Descripcion:</label>
+ <label for="description">Descripcion:</label>
  <input type="text" name="desc" id="desc" value="">
  </div>
 
