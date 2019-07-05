@@ -1,4 +1,4 @@
-<form class="" action="/products/save" method="post">
+<form class="" action="/admin/products/" method="post">
  @csrf
 <div class="form-group">
  <label for="name">Nombre:</label>
@@ -30,7 +30,7 @@
 
 <div class="form-group">
  <label for="img">Imagen:</label>
- <input type="file" name="img" id="img" value="">
+ <input type="file" name="image" id="image value="">
  </div>
 
 <button type="submit" name="">Guardar</button>

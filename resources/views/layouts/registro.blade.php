@@ -59,7 +59,7 @@
 
  <div class="caja-registro">
    <h1>Registrate</h1>
-     <form class="" action="registro.php" method="POST" enctype="multipart/form-data">
+     <form class="" action="home" method="POST" enctype="multipart/form-data">
        <div class="texto-registro">
          <label for="nombre"></label>
          <input id="nombre" type="text" name="nombre" value="<?=$nombreOK?>" placeholder="Nombre">
@@ -89,61 +89,6 @@
          <?php endif; ?>
        </div>
        <div class="texto-registro">
-         <label for="pais">Vivo en:</label>
-         <select class="" name="pais" id="pais">
-           <?php if (isset($_POST["pais"]) && $_POST["pais"] == "ar") : ?>
-             <option value="ar" selected >Argentina</option>
-           <?php else : ?>
-             <option value="ar">Argentina</option>
-           <?php endif; ?>
-           <?php if (isset($_POST["pais"]) && $_POST["pais"] == "br") : ?>
-             <option value="br" selected >Brasil</option>
-           <?php else : ?>
-             <option value="br">Brasil</option>
-           <?php endif; ?>
-           <?php if (isset($_POST["pais"]) && $_POST["pais"] == "bo") : ?>
-             <option value="bo" selected >Bolivia</option>
-           <?php else : ?>
-             <option value="bo">Bolivia</option>
-           <?php endif; ?>
-           <?php if (isset($_POST["pais"]) && $_POST["pais"] == "ch") : ?>
-             <option value="ch" selected >Chile</option>
-           <?php else : ?>
-             <option value="ch">Chile</option>
-           <?php endif; ?>
-           <?php if (isset($_POST["pais"]) && $_POST["pais"] == "cl") : ?>
-             <option value="cl" selected >Colombia</option>
-           <?php else : ?>
-             <option value="cl">Colombia</option>
-           <?php endif; ?>
-           <?php if (isset($_POST["pais"]) && $_POST["pais"] == "ec") : ?>
-             <option value="ec" selected >Ecuador</option>
-           <?php else : ?>
-             <option value="ec">Ecuador</option>
-           <?php endif; ?>
-           <?php if (isset($_POST["pais"]) && $_POST["pais"] == "py") : ?>
-             <option value="py" selected >Paraguay</option>
-           <?php else : ?>
-             <option value="py">Paraguay</option>
-           <?php endif; ?>
-           <?php if (isset($_POST["pais"]) && $_POST["pais"] == "pe") : ?>
-             <option value="pe" selected >Peru</option>
-           <?php else : ?>
-             <option value="pe">Peru</option>
-           <?php endif; ?>
-           <?php if (isset($_POST["pais"]) && $_POST["pais"] == "uy") : ?>
-             <option value="uy" selected >Uruguay</option>
-           <?php else : ?>
-             <option value="uy">Uruguay</option>
-           <?php endif; ?>
-           <?php if (isset($_POST["pais"]) && $_POST["pais"] == "ot") : ?>
-             <option value="ot" selected >Otro</option>
-           <?php else : ?>
-             <option value="ot">Otro</option>
-           <?php endif; ?>
-         </select>
-       </div>
-       <div class="texto-registro">
          <label for="foto">Mi foto de perfil</label>
          <input type="file" name="foto" value="foto">
          <?php if(isset($warning["foto"])): ?>
@@ -153,6 +98,10 @@
        <div class="texto-checkbox">
          <input id=mailing type="checkbox" name="mailing" value="si">
          <label for="mailing">Quiero que me envien ofertas por mail!</label>
+       </div>
+       <div class="admin-checkbox">
+         <input type="checkbox" name="admin" value="si">
+         <label for="">Es Admin</label>
        </div>
      <div class="buton_registro">
        <button type="submit" name="button">REGISTRAME</button>

@@ -22,14 +22,7 @@
         @enderror
       </div>
 
-      <!-- HAY QUE TOCAR EL TEMA DEL APELLIDO  -->
-
-      <div class="texto-registro">
-        <label for="apellido"></label>
-        <input id="apellido" type="text" name="apellido" value="" placeholder="Apellido">
-      </div>
-
-
+      
       <div class="texto-registro">
         <label for="email"></label>
         <input id="email" type="email" class= "@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email">
@@ -57,6 +50,10 @@
           <input id="password-confirm" type="password" class="texto-registro" name="password_confirmation" placeholder="Confirmar contraseña"  required autocomplete="new-password">
         </div>
 
+        <div class="">
+          <label for="avatar">Avatar</label>
+          <input type="file" name="avatar" value="">
+        </div>
 
         <div class="buton_registro">
                 <button type="submit" class="btn btn-primary">

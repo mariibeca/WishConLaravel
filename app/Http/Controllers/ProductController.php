@@ -35,6 +35,7 @@ class ProductController extends Controller
           'name'=> 'required',
           'price'=> 'required|numeric',
           'category_id'=> 'required',
+          'image' => 'nullable|file',
 
         ],
         [
@@ -52,9 +53,15 @@ class ProductController extends Controller
         $productoAEditar->description = $request->description;
         $productoAEditar->category_id = $request->category_id;
 
+        if ($request->file('image')){
+          $rutaDelArchivo = $request->file('image')->store('public');
+          $nombreArchivo = basename($rutaDelArchivo);
+          $productoAEditar->image = $nombreArchivo;
+        }
 
         //lo mando a guardar
         $productoAEditar->save();
+        return redirect('admin/products');
 
       }
 
@@ -65,24 +72,33 @@ class ProductController extends Controller
                 'name' => 'required',
                 'price' => 'required|numeric',
                 'category_id' => 'required',
+                'image' => 'nullable|file',
 
             ],
             [
                 'name.required' => 'El campo Nombre es Obligatorio',
              ]);
 
+             $rutaDelArchivo = $request->file('image')->store('public');
+             $nombreArchivo = basename($rutaDelArchivo);
+
             $product = new Product([
                 'name' => $request->input('name'),
                 'price' => $request->input('price'),
                 'description' => $request->input('desc'),
                 'category_id' => $request->input('category_id'),
+                'image' => $nombreArchivo,
 
             ]);
 
             $product->save();
-             //$nombreProduct = $request->input('name');
-            // dd($nombreGenero);
-            return redirect('/products');
+            return redirect('admin/products');
 
-        }
+           }
+           public function delete($id){
+             $productoADeletar = Product::find($id);
+             $productoADeletar->delete();
+             return redirect('admin/products');
+           }
+
 }

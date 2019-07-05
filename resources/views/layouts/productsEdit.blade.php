@@ -1,3 +1,7 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
 <form class="" action="" method="post" enctype="multipart/form-data">
  @csrf
 <div class="form-group">
@@ -31,7 +35,7 @@
 
 <div class="form-group">
  <label for="img">Imagen:</label>
- <input type="file" name="img" id="img" value="">
+ <input type="file" name="image" id="image" value="">
  </div>
 
 <button type="submit" name="">Guardar</button>
