@@ -2,6 +2,8 @@
 
 /* Rutas nuevas */
 
+        Route::post('carrito', 'CartController@add')->middleware('auth');
+        Route::get('carrito', 'CartController@indexCart')->middleware('auth');
         Route::post('/profile/edit/', 'UserController@update')->middleware('auth');
         Route::get('/profile/edit/', 'UserController@edit')->middleware('auth');
         Route::get('/profile', 'UserController@profile')->middleware('auth');

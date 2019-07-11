@@ -26,8 +26,8 @@ listado de productos
           <div class="card-body">
              <h5 class="card-title">{{$product->name}}</h5>
                <p class="card-text">Precio: {{$product->price}}</p>
-               <p class="card-text">Categoria:{{$product->category->name}} </p>
-               <p class="card-text">Descripción:{{$product->description}} </p>
+               <p class="card-text">Categoria: {{$product->category->name}} </p>
+               <p class="card-text">Descripción: {{$product->description}} </p>
                <p class="card-text">
                   <a class="btn btn-primary" href="">Ver Mas</a>
                   <a class="btn btn-success" href="/admin/products/edit/{{$product->id}}">Editar</a>
@@ -38,7 +38,16 @@ listado de productos
                         <p class="boton">
                           <button type="submit" class="btn btn-danger" name="eliminar" id="eliminar">Apagar</button>
                         </p>
-                      </form>  
+                      </form>
+                 </div>
+                 <div class="">
+                   <form class="" action="/carrito" method="post" enctype="multipart/form-data">
+                     @csrf
+                     <label for="quantity"></label>
+                     <input type="number" name="quantity" min="1" max="5" value="1">
+                     <button type="submit" name="product_id" value="{{$product->id}}">Agregar Carrito</button>
+                   </form>
+
                  </div>
               </p>
            </div>

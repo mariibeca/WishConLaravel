@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -56,14 +56,6 @@ class Inicial extends Migration
               $table->timestamps();
           });
 
-            Schema::create('cart', function (Blueprint $table) {
-              $table->bigIncrements('id')->unsigned();
-              $table->integer('user_id');
-              $table->integer('product_id');
-              $table->integer('address_id');
-              $table->integer('amount')->default(0);
-              $table->timestamps();
-          });
 
           //Si en otra migracion quisieramos cambiar alguno de estos datos
           //tenemos que usar TABLE en vez de CREATE

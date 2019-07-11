@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
+use App\Cart;
 
 class ProductController extends Controller
 {
@@ -52,6 +53,7 @@ class ProductController extends Controller
         $productoAEditar->price = $request->price;
         $productoAEditar->description = $request->description;
         $productoAEditar->category_id = $request->category_id;
+        $productoAEditar->quantity = $request->quantity;
 
         if ($request->file('image')){
           $rutaDelArchivo = $request->file('image')->store('public');
@@ -96,6 +98,7 @@ class ProductController extends Controller
 
            }
            public function delete($id){
+             Cart::where('product_id', $id)->delete();
              $productoADeletar = Product::find($id);
              $productoADeletar->delete();
              return redirect('admin/products');
