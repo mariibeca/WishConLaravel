@@ -31,7 +31,6 @@ class Inicial extends Migration
               $table->text('description')->nullable();
               $table->decimal('rating')->nullable();
               $table->integer('category_id');
-              $table->string('token');
               $table->timestamps();
           });
 

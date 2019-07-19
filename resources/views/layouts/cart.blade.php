@@ -34,8 +34,6 @@
     .main_nav ul {
       margin-bottom: auto;
     }
-    
-
   </style>
 
   <div class="container">
@@ -56,7 +54,7 @@
 
   </div>
   @foreach ($cart as $product)
-  <div class="container">
+  <div class="container" id="carrito{{$product->pivot->id}}">
         <div class="row">
               <div class="col">
                 <img src="/storage/{{$product->image}}" alt="sweater" id="promo">
@@ -65,18 +63,18 @@
                 <div class="product_name"><a href="#">{{$product->name}}</a></div>
               </div>
               <div class="col">
-                <input type="number" name="quantity" min="1" max="5" value="{{$product->pivot->quantity}}">
+                <input type="number" name="quantity" value="{{$product->pivot->quantity}}">
               </div>
               <div class="col">
                 <div class="product_price">${{$product->price}}</div>
               </div>
               <div class="col">
                 <div class="padding-eje-y">
-                    <form class="" action="/admin/products/delete/{{$product->id}}" method="post">
+                    <form class="" action="/carrito/delete/{{$product->id}}" method="post">
                       @csrf
                       @method('DELETE')
                       <p class="boton">
-                        <button type="submit" class="btn btn-danger" name="eliminar" id="eliminar">Deletar</button>
+                        <button type="submit" class="btn btn-danger" name="eliminar" id="{{$product->pivot->id}}">Deletar</button>
                       </p>
                     </form>
                </div>
@@ -87,75 +85,56 @@
           </div>
         </div>
   @endforeach
-        <div class="container">
-          <div class="row">
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">Subtotal:
-            </div>
-            <div class="col">
 
-            </div>
-          </div>
+<?php
+$precio = 0;
+foreach ($cart as $product) {
+ $productTotal = $product->price * $product->pivot->quantity;
+ $precio = $precio + $productTotal;
+}
+?>
+
+  <div class="container">
+      <div class="row">
+        <div class="col">
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">Tax:
-            </div>
-            <div class="col">
-
-            </div>
-          </div>
+        <div class="col">
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">Shipping:
-            </div>
-            <div class="col">
-
-            </div>
-          </div>
+        <div class="col">
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">Total:
-            </div>
-            <div class="col">
-
-            </div>
-          </div>
+        <div class="col">
         </div>
+        <div class="col">Total:
+        </div>
+        <div class="col">${{$precio}}
+        </div>
+      </div>
+    </div>
+</div>
+<script type="text/javascript">
+  var buttons = document.querySelectorAll('.eliminar');
+  for (button of buttons) {
+    boton.onclick = function(){
+      cartId = this.getAttribute('id');
 
-  </div>
+      fetch('http://localhost:8000/api/borrarProduct/'+cartId)
+      .then(function(response){
+            return response.json();
+        })
+      .then(function(datos){
+        if (datos.eliminado) {
+          div = document.querySelector('#carrito'+cartId);
+          div.setAttribute("style", "display:none");
+        }
+
+        })
+      .catch(function(error){
+            console.log(error);
+        });
+    }
+  }
+
+
+</script>
 
   @endsection

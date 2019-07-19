@@ -11,9 +11,26 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products= Product::paginate(3);
-        return view('layouts.products', compact('products'));
+      if(isset($_GET['name']))
+      {
+        $products = Product::where('name', 'LIKE', '%'.$_GET['name'].'%')->paginate(4);
+      } else {
+        $products= Product::where('category_id', 1)->paginate(6);
 
+      }
+        return view('layouts.products', compact('products'));
+    }
+
+    public function accesorios()
+    {
+        $products= Product::where('category_id', 2)->paginate(6);
+        return view('layouts.accesorios', compact('products'));
+    }
+
+    public function indexPlus()
+    {
+        $products= Product::paginate(6);
+        return view('layouts.productsPlus', compact('products'));
     }
 
     public function create()
@@ -53,7 +70,7 @@ class ProductController extends Controller
         $productoAEditar->price = $request->price;
         $productoAEditar->description = $request->description;
         $productoAEditar->category_id = $request->category_id;
-        $productoAEditar->quantity = $request->quantity;
+        //$productoAEditar->quantity = $request->quantity;
 
         if ($request->file('image')){
           $rutaDelArchivo = $request->file('image')->store('public');
@@ -63,7 +80,7 @@ class ProductController extends Controller
 
         //lo mando a guardar
         $productoAEditar->save();
-        return redirect('admin/products');
+        return redirect('/products');
 
       }
 
@@ -94,14 +111,14 @@ class ProductController extends Controller
             ]);
 
             $product->save();
-            return redirect('admin/products');
+            return redirect('/products');
 
            }
            public function delete($id){
              Cart::where('product_id', $id)->delete();
              $productoADeletar = Product::find($id);
              $productoADeletar->delete();
-             return redirect('admin/products');
+             return redirect('/products');
            }
 
 }

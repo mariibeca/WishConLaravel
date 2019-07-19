@@ -25,7 +25,7 @@
     background-color: black;
   }
   .shopping ul li {
-    width: 28px;
+    width: 32px;
   }
   .login-registro a {
     text-decoration: none;
@@ -40,20 +40,23 @@
 </style>
 
 <header class="header">
-  <div class="logo"><a href="index">Wish</a></div>
+  <div class="logo"><a href="/">Wish</a></div>
 			<nav class="main_nav">
 				<ul>
-					<li><a href="ropa">ROPA</a></li>
-					<li><a href="accesorios">ACCESORIOS</a></li>
-					<li><a href="contacto">CONTACTO</a></li>
-				</ul>
+					<li><a href="/products">PRODUCTS</a></li>
+					<li><a href="/accesorios">ACCESORIOS</a></li>
+        </ul>
 			</nav>
-      <div class="search-box">
-        <input type="search" name="" value="" class="search_input">
-        <button type="submit" name="button" id="search_button">
+
+      <form class="search-box" action="/products" method="get">
+
+          <input type="tex" name="name" value="" class="search_input" placeholder="Buscá Productos">
+          <button type="submit" name="button" id="search_button">
             <i class="fas fa-search"></i>
-        </button>
-      </div>
+          </button>
+
+      </form>
+
       <div class="login-registro">
       @if (Auth::guest())
 
@@ -85,14 +88,20 @@
       </div>
       <div class="shopping">
         <ul>
-          <li><a href="/carrito"><i class="fas fa-shopping-cart"></i>({{ \App\Cart::count() }})</a></li>
-          <li><a href="#"><i class="far fa-heart"></i></a></li>
+          <li><a href="/carrito"><i class="fas fa-shopping-cart"></i>
+            @if(Auth::user())
+
+              ({{ \App\Cart::count() }})
+            </a>
+          </li>
+
+          @endif
         </ul>
       </div>
    <label class="hamb" for="toggle">&#9776;</label>
    <input type="checkbox" id="toggle">
   <div class="nuevo_menu">
-    <a href="ropa">ROPA</a>
+    <a href="/products">PRODUCTS</a>
     <a href="accesorios">ACCESORIOS</a>
     <a href="contacto">CONTACTO</a>
     <a href="login">LOGIN</a>

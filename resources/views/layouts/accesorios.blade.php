@@ -1,117 +1,110 @@
 @extends('layouts.default')
-@section('estilos')
-<link rel="stylesheet" href="/css/accesorios.css">
-@endsection
-@section('contenido')
 
-  <div class="container">
-  
-<!-- BODY -->
-  <div class="accesorios">
-  <div class="accesorios_content">
+@section('estilos')
+<link rel="stylesheet" href= "/css/products.css">
+<style>
+  .card-img-top
+  {
+    width: 93%;
+    margin-bottom: 15px;
+    margin-top: 60px;
+  }
+  .btn-primary {
+    margin-bottom: 15px;
+  }
+  .btn-primary a {
+    color: white;
+  }
+  .btn-success {
+      margin-right: 5px;
+  }
+  .btn-success a {
+    color: white;
+  }
+  .btn-danger {
+    margin-right: 5px;
+  }
+  .btn-info a {
+    color: white;
+  }
+  .quantity {
+    margin-top: 7px;
+  }
+  .container2 {
+    display: flex;
+  }
+</style>
+@endsection
+
+
+
+@section('contenido')
+<div class="ropa">
+  <div class="ropa_content">
     <div class="row">
       <div class="col">
-        <div class="accesorios_subtitle">WISH
+        <div class="ropa_subtitle">WISH
         </div>
-        <div class="accesorios_title"> ACCESORIOS
+        <div class="ropa_title"> ACCESORIOS
         </div>
       </div>
     </div>
   </div>
+
+@if((Auth::user())&& (Auth::user()->is_admin))
+<div class="container">
   <div class="row">
-    <div class="product col-md-4">
-      <!--producto 1 -->
-        <img width="100%"src="img/product_7.jpg" alt="lentes" id="promo">
-      <div class="rating rating_4">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-      </div>
-      <div class="product_info">
-        <div class="product_name"><a href="#">Lentes Fiji</a></div>
-        <div class="product_price">$200</div>
-      </div>
+    <div class="col">
+      <div class="btn btn-primary"><a href="/products/create">Agregar Nuevo Accesorio</a></div>
     </div>
-    <!--producto 2 -->
-      <div class="col-md-4">
-        <img width="100%"src="img/product_9.jpg" alt="coronaflor" id="promo">
-      <div class="rating rating_4">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-      </div>
-      <div class="product_info">
-        <div class="product_name"><a href="#">Corona Bahamas</a></div>
-        <div class="product_price">$150</div>
-      </div>
-    </div>
-    <!--producto 3 -->
-    <div class="product col-md-4 ">
-        <img width="100%"src="img/product_3.jpg" alt="sombrero" id="promo">
-      <div class="rating rating_4">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-      </div>
-      <div class="product_info">
-        <div class="product_name"><a href="#">Sombrero Grecia</a></div>
-        <div class="product_price">$300</div>
-      </div>
-    </div>
-    </div>
-    <div class="row">
-      <div class="product col-md-4">
-        <!--producto 4 -->
-          <img width="100%" height="511px"src="img/product_image_1.jpg" alt="collar" id="promo">
-        <div class="rating rating_4">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-        </div>
-        <div class="product_info">
-          <div class="product_name"><a href="#">Collar Ivy</a></div>
-          <div class="product_price">$100</div>
-        </div>
-      </div>
-      <!--producto 5 -->
-        <div class="col-md-4">
-          <img width="100%"src="img/product_11.jpg" alt="aros" id="promo">
-        <div class="rating rating_4">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-        </div>
-        <div class="product_info">
-          <div class="product_name"><a href="#">Aros Kendall</a></div>
-          <div class="product_price">$100</div>
-        </div>
-      </div>
-      <!--producto 6 -->
-      <div class="product col-md-4 ">
-          <img width="100%"src="img/product_12.jpg" alt="anillos" id="promo">
-        <div class="rating rating_4">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-        </div>
-        <div class="product_info">
-          <div class="product_name"><a href="#">Anillos Roxie</a></div>
-          <div class="product_price">$100</div>
-        </div>
-      </div>
-      </div>
+  </div>
 </div>
-</div>
-@endsection
+@else
+@endif
+        <div class="container">
+          <div class="row">
+            @foreach ($products as $product)
+            <div class="col-sm-4">
+
+
+                <img width="250px" class="card-img-top" src="/storage/{{$product->image}}" alt="Card image cap">
+
+                <div class="card-text">${{$product->price}}</div>
+
+                <div class="card-title">{{$product->name}}</div>
+
+                <div hidden class="card-text">Categoria: {{$product->category->name}} </div>
+
+                <div hidden class="card-text">Descripción: {{$product->description}} </div>
+
+                @if((Auth::user())&& (Auth::user()->is_admin))
+                <div class="container2">
+                  <div class="btn btn-success" ><a href="/products/edit/{{$product->id}}">Editar</a></div>
+                  <form class="" action="/products/delete/{{$product->id}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger" name="eliminar" id="eliminar">Apagar</button>
+                  </form>
+                </div>
+                @else
+                @endif
+
+
+                  <form class="quantity" action="/carrito" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <input type="number" name="quantity" min="1" max="5" value="1">
+                    <button type="submit"  name="product_id" class="btn btn-secondary" value="{{$product->id}}">Agregar Carrito</button>
+                  </form>
+
+
+              </div>
+
+              @endforeach
+
+          </div>
+        </div>
+
+
+      {{$products->links()}}
+    </div>
+    @endsection

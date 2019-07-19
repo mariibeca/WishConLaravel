@@ -2,20 +2,23 @@
 
 /* Rutas nuevas */
 
-        Route::post('carrito', 'CartController@add')->middleware('auth');
-        Route::get('carrito', 'CartController@indexCart')->middleware('auth');
+        Route::post('/carrito', 'CartController@add')->middleware('auth');
+        Route::get('/carrito', 'CartController@indexCart')->middleware('auth');
         Route::post('/profile/edit/', 'UserController@update')->middleware('auth');
         Route::get('/profile/edit/', 'UserController@edit')->middleware('auth');
         Route::get('/profile', 'UserController@profile')->middleware('auth');
         Route::get('/products/save', function(){
           return view('layouts.productsSave');
         });
-        Route::delete('admin/products/delete/{id}', 'ProductController@delete')->middleware(['auth', 'admin']);
-        Route::get('admin/products/create', 'ProductController@create')->middleware(['auth', 'admin']);
-        Route::post('admin/products/create', 'ProductController@save')->middleware(['auth', 'admin']);
-        Route::get('admin/products', 'ProductController@index')->middleware(['auth', 'admin']); //funciona
-        Route::post('admin/products/edit/{id}', 'ProductController@update')->middleware(['auth', 'admin']);
-        Route::get('admin/products/edit/{id}', 'ProductController@edit')->middleware(['auth', 'admin']);
+        Route::delete('/carrito/delete/{id}', 'CartController@delete')->middleware('auth');
+        Route::delete('/products/delete/{id}', 'ProductController@delete')->middleware(['auth', 'admin']);
+        Route::get('/products/create', 'ProductController@create')->middleware(['auth', 'admin']);
+        Route::post('/products/create', 'ProductController@save')->middleware(['auth', 'admin']);
+        Route::get('/products', 'ProductController@index'); //funciona
+        Route::post('/products/edit/{id}', 'ProductController@update')->middleware(['auth', 'admin']);
+        Route::get('/products/edit/{id}', 'ProductController@edit')->middleware(['auth', 'admin']);
+
+        Route::get('/productsPlus/{id}', 'ProductController@indexPlus');
 
         Route::get('/', function(){
           return view('layouts.index');
@@ -25,9 +28,7 @@
           return view('layouts.index');
         });
 
-        Route::get('/accesorios', function(){
-          return view('layouts.accesorios');
-        });
+        Route::get('/accesorios', 'ProductController@accesorios');
 
         Route::get('/contacto', function(){
           return view('layouts.contacto');

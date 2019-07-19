@@ -8,13 +8,13 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/home_slider_1.jpg" class="d-block w-100" alt= "home_slider_1">
+      <a href="/products"><img src="img/home_slider_1.jpg" class="d-block w-100" alt= "home_slider_1"></a>
     </div>
     <div class="carousel-item">
-      <img src="img/home_slider_1.jpg" class="d-block w-100" alt="img/home_slider_1">
+      <a href="/products"><img src="img/home_slider_1.jpg" class="d-block w-100" alt="img/home_slider_1"></a>
     </div>
     <div class="carousel-item">
-      <img src="img/home_slider_1.jpg" class="d-block w-100" alt="img/home_slider_1">
+      <a href="/products"><img src="img/home_slider_1.jpg" class="d-block w-100" alt="img/home_slider_1"></a>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -26,12 +26,8 @@
     <span class="sr-only">Next</span>
   </a>
   <div class="home_slider_content">
-    <div class="home_slider_subtitle">
-    Promociones
-    </div>
-    <div class="home_slider_title">
-      Nueva Colección
-    </div>
+    <a href="/products"><div class="home_slider_subtitle">Promociones</div></a>
+    <a href="/products"><div class="home_slider_title">Nueva Colección</div></a>
   </div>
 </div>
 <div class="container">
@@ -49,25 +45,23 @@
       <div class="col-12 col-sm-6 col-md-4">
         <div class="promo_item">
           <div class="promo_image">
-            <img src="img/promo_1.jpg" alt="pollera-rosa" id="promo">
+            <a href="/accesorios"><img src="img/promo_1.jpg" alt="pollera-rosa" id="promo"></a>
               <div class="promo_image_content promo_image_content_1">
-                <div class="promo_image_title">
-                  -30% off
-                </div>
+                <a href="/accesorios"><div class="promo_image_title">-30% off</div></a>
                 <div class="promo_image_subtitle">
                   EN CARTERAS
                 </div>
               </div>
           </div>
           <div class="promo_link">
-            <a href="#">VER PRODUCTO</a>
+            <a href="/accesorios">VER PRODUCTO</a>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <div class="promo_item">
           <div class="promo_image">
-            <img src="img/promo_2.jpg" alt="saco-marron" id="promo">
+            <a href="/accesorios"><img src="img/promo_2.jpg" alt="saco-marron" id="promo"></a>
             <div class="promo_image_content promo_image_content_2">
               <div class="promo_image_title">
                 -30% off
@@ -78,14 +72,14 @@
             </div>
           </div>
           <div class="promo_link">
-            <a href="#">VER PRODUCTO</a>
+            <a href="/accesorios">VER PRODUCTO</a>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <div class="promo_item">
           <div class="promo_image">
-            <img src="img/promo_3.jpg" alt="zapatos" id="promo">
+            <a href="/accesorios"><img src="img/promo_3.jpg" alt="zapatos" id="promo"></a>
             <div class="promo_image_content promo_image_content_3">
               <div class="promo_image_title">
                 -25% off
@@ -96,7 +90,7 @@
             </div>
           </div>
           <div class="promo_link">
-            <a href="#">VER PRODUCTO</a>
+            <a href="/accesorios">VER PRODUCTO</a>
           </div>
         </div>
       </div>
@@ -118,7 +112,7 @@
     <div class="row">
       <div class="product col-md-4">
         <!--producto 1 -->
-          <img src="img/product_1.jpg" alt="sweater" id="promo">
+          <a href="/products"><img src="img/product_1.jpg" alt="sweater" id="promo"></a>
         <div class="rating rating_4">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
@@ -133,7 +127,7 @@
       </div>
       <!--producto 2 -->
         <div class="col-md-4">
-          <img src="img/product_2.jpg" alt="top" id="promo">
+          <a href="/products"><img src="img/product_2.jpg" alt="top" id="promo"></a>
         <div class="rating rating_4">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
@@ -148,7 +142,7 @@
       </div>
       <!--producto 3 -->
       <div class="product col-md-4 ">
-          <img src="img/product_3.jpg" alt="remera" id="promo">
+          <a href="/produts"><img src="img/product_3.jpg" alt="remera" id="promo"></a>
         <div class="rating rating_4">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>

@@ -17,7 +17,7 @@
      <h2>¡A comprar!</h2>
      <div class="texto-login">
        <!-- //form-control -->
-       <input id="email" class=" @error('email') is-invalid @enderror" type="email" placeholder="Tu email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+       <input id="email" class=" @error('email') is-invalid @enderror" type="text" placeholder="Tu email" name="email" value="{{ old('email') }}"  autofocus>
        @error('email')
            <span class="invalid-feedback" role="alert">
                <strong>{{ $message }}</strong>
@@ -26,7 +26,7 @@
      </div>
 
      <div class="texto-login">
-       <input id="password" type="password" class="@error('password') is-invalid @enderror" placeholder="Contraseña" name="password" required autocomplete="current-password">
+       <input id="password" type="password" class="@error('password') is-invalid @enderror" placeholder="Contraseña" name="password" >
        @error('password')
            <span class="invalid-feedback" role="alert">
                <strong>{{ $message }}</strong>
@@ -58,6 +58,6 @@
 
 </form>
 
-
+<script src="/js/auth/login.js" type="text/javascript"></script>
 
 @endsection
